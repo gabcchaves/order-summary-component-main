@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--pale-blue);
+	font-family: 'Red Hat Display', sans-serif;
+	color: var(--desaturated-blue);
+}
+
+h3, strong {
+	color: var(--dark-blue);
+}
+
+a {
+	color: var(--bright-blue);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-image: url("images/pattern-background-desktop.svg");
+	background-repeat: no-repeat;
+}
+
+.card {
+	width: 30%;
+	height: auto;
+	background-color: var(--very-pale-blue);
+	border-radius: 15px;
+	box-shadow: 0 2px 20px var(--desaturated-blue);
+	text-align: center;
+}
+
+.card > :first-child {
+	width: 100%;
+	height: auto;
+	border-radius: 15px 15px 0 0;
+}
+
+.card-info {
+	padding: 10%;
+}
+
+.card-title {
+	font-size: 18pt;
+	margin: 0;
+}
+
+.plan {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 5% 0;
+	background-color: hsla(225, 100%, 94%, 30%);
+	border-radius: 10px;
+	margin: 1em 0;
+}
+
+.plan div {
+	flex: 1;
+}
+
+button {
+	width: 100%;
+	height: 3.5em;
+	border: none;
+	border-radius: 10px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.proceed-button {
+	background-color: var(--bright-blue);
+	color: var(--very-pale-blue);
+	box-shadow: 0 4px 20px -2px gray;
+	margin-bottom: 1em;
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.proceed-button:hover {
+	background-color: hsla(245, 75%, 52%, 80%);
+}
+
+.cancel-button {
+	background-color: inherit;
+	color: var(--desaturated-blue);
+}
+
+.cancel-button:hover {
+	color: var(--dark-blue);
+}
+
+@media screen and (max-width: 900px) {
+	.container {
+		background-image: url("images/pattern-background-mobile.svg");
+	}
+
+	.card {
+		width: 90%;
+		height: auto;
+	}
+}
